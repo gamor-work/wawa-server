@@ -2,6 +2,7 @@ package controller
 
 import (
 	Msql "gin/databases"
+	response "gin/utils"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
@@ -26,5 +27,5 @@ func UserHandler(c *gin.Context) {
 		persons = append(persons, person)
 	}
 
-	c.JSON(http.StatusOK, persons)
+	c.JSON(http.StatusOK, response.OK.WithData(persons))
 }

@@ -19,5 +19,4 @@ func ZookeeperRegister() {
 	global.ZookeeperConn = conn
 
 	defer conn.Close()
-
 }
